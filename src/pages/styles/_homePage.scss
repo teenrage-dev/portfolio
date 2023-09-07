@@ -1,0 +1,53 @@
+@import '/src/styles/utils/variables';
+
+.header {
+  padding-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  & .title-name {
+    & .title {
+      text-shadow: $text-shadow;
+
+      font-size: 50px;
+      font-weight: 600;
+
+      text-transform: uppercase;
+      & .title-field {
+        font-weight: 300;
+      }
+    }
+  }
+
+  & .nav-bar {
+    & .nav-list {
+      display: flex;
+
+      & .nav-list-item {
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.menu-nav {
+  width: 90px;
+  border-radius: 40px;
+  background: $background-color-menu;
+  position: absolute;
+  top: 50%;
+  right: 80px;
+
+  transform: translateY(-50%);
+
+  & .menu-nav-list {
+    padding: 75px 25px;
+    background-color: transparent;
+    & .menu-nav-list-item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
