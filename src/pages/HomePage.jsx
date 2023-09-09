@@ -7,7 +7,12 @@ import { MdMessage } from 'react-icons/md';
 import { TbMailFilled } from 'react-icons/tb';
 
 import HeaderLink from '../components/HeaderLink';
-import { PRIMARY_ICON_COLOR, WHITE_ICON_COLOR } from '../constants';
+import {
+  MENU_ICON_SIZE,
+  PRIMARY_ICON_COLOR,
+  PRIMARY_ICON_SIZE,
+  WHITE_ICON_COLOR,
+} from '../constants';
 
 import '../styles/components/_container.scss';
 import './styles/_homePage.scss';
@@ -27,13 +32,23 @@ const HomePage = () => {
           <ul className='nav-list'>
             <li className='nav-list-item'>
               <HeaderLink
-                icon={<FaLinkedin size={30} color={PRIMARY_ICON_COLOR} />}
+                icon={
+                  <FaLinkedin
+                    size={PRIMARY_ICON_SIZE}
+                    color={PRIMARY_ICON_COLOR}
+                  />
+                }
                 link={'https://www.linkedin.com/in/renat-raiend/'}
               />
             </li>
             <li className='nav-list-item'>
               <HeaderLink
-                icon={<FaGithub size={30} color={PRIMARY_ICON_COLOR} />}
+                icon={
+                  <FaGithub
+                    size={PRIMARY_ICON_SIZE}
+                    color={PRIMARY_ICON_COLOR}
+                  />
+                }
                 link={'https://github.com/teenrage-dev'}
               />
             </li>
@@ -43,19 +58,19 @@ const HomePage = () => {
       <div className='menu-nav'>
         <ul className='menu-nav-list'>
           <li className='menu-nav-list-item'>
-            <HiHome size={40} color={WHITE_ICON_COLOR} />
+            <HiHome size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
           </li>
           <li className='menu-nav-list-item'>
-            <IoPersonSharp size={40} color={WHITE_ICON_COLOR} />
+            <IoPersonSharp size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
           </li>
           <li className='menu-nav-list-item'>
-            <PiSquaresFourFill size={40} color={WHITE_ICON_COLOR} />
+            <PiSquaresFourFill size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
           </li>
           <li className='menu-nav-list-item'>
-            <MdMessage size={40} color={WHITE_ICON_COLOR} />
+            <MdMessage size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
           </li>
           <li className='menu-nav-list-item'>
-            <TbMailFilled size={40} color={WHITE_ICON_COLOR} />
+            <TbMailFilled size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
           </li>
         </ul>
       </div>
