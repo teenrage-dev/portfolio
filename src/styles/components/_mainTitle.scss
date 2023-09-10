@@ -1,0 +1,16 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixins';
+
+.main-title {
+  font-size: 56px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @include accent-selection-text-styles;
+
+  & .main-title-field {
+    color: $accent-color;
+
+    @include primary-selection-text-styles;
+  }
+}

@@ -29,6 +29,18 @@
         &:first-child {
           margin-right: 10px;
         }
+
+        fill: $white-color;
+        &:hover {
+          fill: $accent-color;
+        }
+
+        & .nav-list-item-link {
+          fill: inherit;
+          &:hover {
+            fill: inherit;
+          }
+        }
       }
     }
   }
@@ -50,12 +62,6 @@
     & .menu-nav-list-item {
       &:not(:last-child) {
         margin-bottom: 10px;
-      }
-
-      & .menu-nav-list-item-link {
-      }
-
-      & .menu-nav-list-item-link-active {
       }
     }
   }

@@ -1,0 +1,26 @@
+.background-container {
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  overflow: hidden;
+  z-index: -1;
+
+  width: 100%;
+  max-width: 801px;
+  max-height: 1069px;
+  display: flex;
+  justify-content: center;
+
+  & .background-image {
+    object-fit: cover;
+    object-position: bottom center;
+  }
+  & #background-face {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+  }
+}

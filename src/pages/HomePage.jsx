@@ -12,7 +12,6 @@ import HeaderLink from '../components/HeaderLink';
 import {
   ACCENT_ICON_COLOR,
   MENU_ICON_SIZE,
-  PRIMARY_ICON_COLOR,
   PRIMARY_ICON_SIZE,
   WHITE_ICON_COLOR,
 } from '../constants';
@@ -38,7 +37,7 @@ export const HomePage = () => {
                 icon={
                   <FaLinkedin
                     size={PRIMARY_ICON_SIZE}
-                    color={PRIMARY_ICON_COLOR}
+                    className='nav-list-item-link'
                   />
                 }
                 link={'https://www.linkedin.com/in/renat-raiend/'}
@@ -49,7 +48,7 @@ export const HomePage = () => {
                 icon={
                   <FaGithub
                     size={PRIMARY_ICON_SIZE}
-                    color={PRIMARY_ICON_COLOR}
+                    className='nav-list-item-link'
                   />
                 }
                 link={'https://github.com/teenrage-dev'}

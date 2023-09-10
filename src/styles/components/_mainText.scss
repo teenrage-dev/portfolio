@@ -1,0 +1,11 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixins';
+
+.main-text {
+  text-align: justify;
+  font-family: $secondary-font-family;
+  font-size: 24px;
+  @include accent-selection-text-styles;
+
+  margin-bottom: 65px;
+}
