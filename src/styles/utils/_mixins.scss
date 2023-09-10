@@ -1,0 +1,13 @@
+@import '/src/styles/utils/variables';
+
+@mixin primary-selection-text-styles {
+  &::selection {
+    background-color: $primary-color;
+  }
+}
+
+@mixin accent-selection-text-styles {
+  &::selection {
+    background-color: $accent-color;
+  }
+}

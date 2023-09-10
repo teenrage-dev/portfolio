@@ -1,4 +1,5 @@
 @import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixins';
 
 .header {
   padding-top: 55px;
@@ -10,10 +11,12 @@
 
       font-size: 50px;
       font-weight: 600;
-
       text-transform: uppercase;
+      @include accent-selection-text-styles;
+
       & .title-field {
         font-weight: 300;
+        @include accent-selection-text-styles;
       }
     }
   }
@@ -32,14 +35,14 @@
 }
 
 .menu-nav {
-  width: 90px;
-  border-radius: 40px;
-  background: $background-color-menu;
-  position: absolute;
-  top: 50%;
-  right: 80px;
+  width: $menu-width;
+  border-radius: $menu-border-radius;
+  background: $menu-background-color;
+  position: $menu-postion;
+  top: $menu-postion-top;
+  right: $menu-postion-right;
 
-  transform: translateY(-50%);
+  transform: $traslate-postion-center-y;
 
   & .menu-nav-list {
     padding: 75px 25px;
@@ -47,6 +50,12 @@
     & .menu-nav-list-item {
       &:not(:last-child) {
         margin-bottom: 10px;
+      }
+
+      & .menu-nav-list-item-link {
+      }
+
+      & .menu-nav-list-item-link-active {
       }
     }
   }

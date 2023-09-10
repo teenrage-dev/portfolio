@@ -8,20 +8,24 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
-import HomePage from './pages/HomePage';
 import reportWebVitals from './reportWebVitals';
+import { HomePage, MyselfPage } from './pages';
 
 const routes = [
-  { path: 'aboutme', element: <div>AboutMe</div> },
-  { path: 'skills', element: <div>Skills</div> },
+  { path: 'myself', element: <MyselfPage /> },
+  { path: 'aboutme', element: <div>Skills</div> },
 ];
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<HomePage />}>
-      {routes.map((route) => (
-        <Route path={route.path} element={route.element} key={route.path} />
-      ))}
+      {routes.map((route) =>
+        route.path === 'myself' ? (
+          <Route index element={route.element} key={route.path} />
+        ) : (
+          <Route path={route.path} element={route.element} key={route.path} />
+        ),
+      )}
     </Route>,
   ),
 );

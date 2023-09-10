@@ -5,9 +5,12 @@ import { IoPersonSharp } from 'react-icons/io5';
 import { PiSquaresFourFill } from 'react-icons/pi';
 import { MdMessage } from 'react-icons/md';
 import { TbMailFilled } from 'react-icons/tb';
+import { Outlet } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 import HeaderLink from '../components/HeaderLink';
 import {
+  ACCENT_ICON_COLOR,
   MENU_ICON_SIZE,
   PRIMARY_ICON_COLOR,
   PRIMARY_ICON_SIZE,
@@ -17,7 +20,7 @@ import {
 import '../styles/components/_container.scss';
 import './styles/_homePage.scss';
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <div className='container'>
       <header className='header'>
@@ -58,24 +61,58 @@ const HomePage = () => {
       <div className='menu-nav'>
         <ul className='menu-nav-list'>
           <li className='menu-nav-list-item'>
-            <HiHome size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
+            <NavLink to='/'>
+              {({ isActive }) => (
+                <HiHome
+                  size={MENU_ICON_SIZE}
+                  color={isActive ? ACCENT_ICON_COLOR : WHITE_ICON_COLOR}
+                />
+              )}
+            </NavLink>
           </li>
           <li className='menu-nav-list-item'>
-            <IoPersonSharp size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
+            <NavLink to='/aboutme'>
+              {({ isActive }) => (
+                <IoPersonSharp
+                  size={MENU_ICON_SIZE}
+                  color={isActive ? ACCENT_ICON_COLOR : WHITE_ICON_COLOR}
+                />
+              )}
+            </NavLink>
           </li>
           <li className='menu-nav-list-item'>
-            <PiSquaresFourFill size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
+            <NavLink to='/messages'>
+              {({ isActive }) => (
+                <PiSquaresFourFill
+                  size={MENU_ICON_SIZE}
+                  color={isActive ? ACCENT_ICON_COLOR : WHITE_ICON_COLOR}
+                />
+              )}
+            </NavLink>
           </li>
           <li className='menu-nav-list-item'>
-            <MdMessage size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
+            <NavLink to='/messages'>
+              {({ isActive }) => (
+                <MdMessage
+                  size={MENU_ICON_SIZE}
+                  color={isActive ? ACCENT_ICON_COLOR : WHITE_ICON_COLOR}
+                />
+              )}
+            </NavLink>
           </li>
           <li className='menu-nav-list-item'>
-            <TbMailFilled size={MENU_ICON_SIZE} color={WHITE_ICON_COLOR} />
+            <NavLink to='/messages'>
+              {({ isActive }) => (
+                <TbMailFilled
+                  size={MENU_ICON_SIZE}
+                  color={isActive ? ACCENT_ICON_COLOR : WHITE_ICON_COLOR}
+                />
+              )}
+            </NavLink>
           </li>
         </ul>
       </div>
+      <Outlet />
     </div>
   );
 };
-
-export default HomePage;

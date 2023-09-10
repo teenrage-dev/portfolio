@@ -1,0 +1,27 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixins';
+
+.accent-btn {
+  padding: 15px 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  border: $button-border;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
+
+  color: $accent-color;
+  font-family: $secondary-font-family;
+  font-size: 24px;
+  font-weight: 500;
+  @include primary-selection-text-styles;
+
+  &:is(:hover, :focus) {
+    background-color: $accent-color;
+    color: $primary-color;
+    text-shadow: $text-shadow;
+  }
+}
