@@ -1,0 +1,17 @@
+@import '/src/styles/utils/variables';
+
+.menu-nav {
+  width: $menu-width;
+  border-radius: $menu-border-radius;
+  background: $menu-background-color;
+  position: $menu-postion;
+  top: $menu-postion-top;
+  right: $menu-postion-right;
+
+  transform: $traslate-postion-center-y;
+
+  & .menu-nav-list {
+    padding: 75px 25px;
+    background-color: transparent;
+  }
+}

@@ -21,7 +21,7 @@
 
   &:is(:hover, :focus) {
     background-color: $accent-color;
-    color: $primary-color;
+    color: $white-color;
     text-shadow: $text-shadow;
   }
 }

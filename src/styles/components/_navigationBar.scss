@@ -1,0 +1,24 @@
+@import '/src/styles/utils/variables';
+
+.nav-list {
+  display: flex;
+
+  & .nav-list-item {
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    fill: $white-color;
+    transition: $transition-fill;
+    &:hover {
+      fill: $accent-color;
+    }
+
+    & .nav-list-item-link {
+      fill: inherit;
+      &:hover {
+        fill: inherit;
+      }
+    }
+  }
+}

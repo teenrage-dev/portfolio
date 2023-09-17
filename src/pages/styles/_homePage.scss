@@ -20,49 +20,4 @@
       }
     }
   }
-
-  & .nav-bar {
-    & .nav-list {
-      display: flex;
-
-      & .nav-list-item {
-        &:first-child {
-          margin-right: 10px;
-        }
-
-        fill: $white-color;
-        &:hover {
-          fill: $accent-color;
-        }
-
-        & .nav-list-item-link {
-          fill: inherit;
-          &:hover {
-            fill: inherit;
-          }
-        }
-      }
-    }
-  }
-}
-
-.menu-nav {
-  width: $menu-width;
-  border-radius: $menu-border-radius;
-  background: $menu-background-color;
-  position: $menu-postion;
-  top: $menu-postion-top;
-  right: $menu-postion-right;
-
-  transform: $traslate-postion-center-y;
-
-  & .menu-nav-list {
-    padding: 75px 25px;
-    background-color: transparent;
-    & .menu-nav-list-item {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
-  }
 }

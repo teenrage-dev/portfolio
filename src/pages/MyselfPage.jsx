@@ -7,18 +7,15 @@ import AccentButton from '../components/AccentButton';
 import BackgoundImage from '../components/BackgoundImage';
 import MainTitle from '../components/MainTitle';
 import MainText from '../components/MainText';
+import { myselfText } from '../constants';
+import { ParticlesContainer } from '../components/ParticlesContainer';
 
 export const MyselfPage = () => {
   return (
     <>
       <div className='section'>
         <MainTitle />
-        <MainText
-          text={`Lorem ipsum dolor sit amet consectetur. Proin nunc sagittis diam sed
-          sit. Auctor ullamcorper ultricies suscipit commodo volutpat sed
-          aliquet neque at.`}
-        />
-        <p className='main-text'></p>
+        <MainText text={myselfText} />
         <div className='wrapper-btn'>
           <AccentButton />
         </div>
@@ -26,6 +23,7 @@ export const MyselfPage = () => {
       <div className='myface'>
         <BackgoundImage />
       </div>
+      <ParticlesContainer />
     </>
   );
 };

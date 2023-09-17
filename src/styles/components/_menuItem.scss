@@ -1,0 +1,50 @@
+@import '/src/styles/utils/variables';
+
+.menu-nav-list-item {
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  & .menu-nav-list-item-hover-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: -225%;
+    transform: $traslate-postion-center-y;
+
+    transition: display 2.3s;
+
+    & .menu-nav-list-item-hover-field {
+      color: $accent-color;
+      font-size: 12px;
+      text-align: center;
+
+      width: 80px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: $primary-background-color;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: $traslate-postion-center-y;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 0 12px 15px;
+        border-color: transparent transparent transparent
+          $primary-background-color;
+        border-radius: 12px;
+      }
+    }
+
+    &.hovered {
+      transition: display 2.3s;
+      display: block;
+    }
+  }
+}
