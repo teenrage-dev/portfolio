@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+import '../styles/components/_transition.scss';
+
 const transitionVariants = {
   initial: {
     x: '100%',
@@ -16,41 +18,32 @@ const transitionVariants = {
   },
 };
 
-const transitionStyles = {
-  position: 'fixed',
-  top: 0,
-  bottom: 0,
-  right: '100%',
-  height: '100vh',
-  zIndex: '30',
-};
-
 export const Transition = ({ children }) => {
   return (
     <>
       <motion.div
+        className='transition-container first'
         variants={transitionVariants}
         initial='initial'
         animate='animate'
         exit='exit'
         transition={{ delay: 0.2, duration: 0.6, ease: 'easeInOut' }}
-        style={{ ...transitionStyles, backgroundColor: '#2b2e30' }}
       ></motion.div>
       <motion.div
+        className='transition-container second'
         variants={transitionVariants}
         initial='initial'
         animate='animate'
         exit='exit'
         transition={{ delay: 0.4, duration: 0.6, ease: 'easeInOut' }}
-        style={{ ...transitionStyles, backgroundColor: '#212425' }}
       ></motion.div>
       <motion.div
+        className='transition-container thrid'
         variants={transitionVariants}
         initial='initial'
         animate='animate'
         exit='exit'
         transition={{ delay: 0.6, duration: 0.6, ease: 'easeInOut' }}
-        style={{ ...transitionStyles, backgroundColor: '#1a1c1d' }}
       ></motion.div>
       {children}
     </>

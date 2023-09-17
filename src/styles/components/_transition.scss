@@ -1,0 +1,20 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixins';
+
+.transition-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  height: 100vh;
+  z-index: 30;
+  &.first {
+    background-color: #2b2e30;
+  }
+  &.second {
+    background-color: #212425;
+  }
+  &.thrid {
+    background-color: #1a1c1d;
+  }
+}
