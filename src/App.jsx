@@ -18,7 +18,31 @@ const routes = [
     path: 'about',
     element: (
       <Transition>
-        <div>Skills</div>
+        <div>About Page</div>
+      </Transition>
+    ),
+  },
+  {
+    path: 'work',
+    element: (
+      <Transition>
+        <div>Work Page</div>
+      </Transition>
+    ),
+  },
+  {
+    path: 'testimonials',
+    element: (
+      <Transition>
+        <div>Testimonials Page</div>
+      </Transition>
+    ),
+  },
+  {
+    path: 'contact',
+    element: (
+      <Transition>
+        <div>Contact Page</div>
       </Transition>
     ),
   },
