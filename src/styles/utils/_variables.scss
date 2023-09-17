@@ -25,3 +25,6 @@ $scrollbar-color: #545f67;
 $scrollbar-color-hover: #545f6780;
 
 $transition-fill: fill 0.3s;
+
+$filter-image: brightness(1.25) drop-shadow(16px 16px 20px #c9bc79) invert(85%)
+  hue-rotate(189deg);

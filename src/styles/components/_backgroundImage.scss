@@ -1,3 +1,5 @@
+@import '../../styles/utils/mixins';
+
 .background-container {
   position: fixed;
   bottom: 0;
@@ -14,6 +16,8 @@
   & .background-image {
     object-fit: cover;
     object-position: bottom center;
+
+    @include filter-image;
   }
   & #background-face {
     bottom: 0;

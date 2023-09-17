@@ -11,3 +11,11 @@
     background-color: $accent-color;
   }
 }
+
+@mixin filter-image {
+  filter: $filter-image;
+  -webkit-filter: $filter-image;
+  -moz-filter: $filter-image;
+  -o-filter: $filter-image;
+  -ms-filter: $filter-image;
+}
