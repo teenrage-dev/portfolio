@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/components/_accentButton.scss';
 
-export default function AccentButton() {
+export default function AccentButton({ onClick }) {
   return (
-    <button className='accent-btn' type='button'>
+    <button className='accent-btn' type='button' onClick={() => onClick()}>
       My project
     </button>
   );

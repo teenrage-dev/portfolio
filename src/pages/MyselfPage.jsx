@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 
 import '../styles/components/_container.scss';
 import './styles/_myselfPage.scss';
@@ -11,13 +12,16 @@ import { myselfText } from '../constants';
 import { ParticlesContainer } from '../components/ParticlesContainer';
 
 export const MyselfPage = () => {
+  const navigate = useNavigate();
+  const onClick = () => navigate('/work');
+
   return (
     <>
       <div className='section'>
         <MainTitle />
         <MainText text={myselfText} />
         <div className='wrapper-btn'>
-          <AccentButton />
+          <AccentButton onClick={onClick} />
         </div>
       </div>
       <div className='myface'>
