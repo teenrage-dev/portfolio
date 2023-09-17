@@ -8,43 +8,23 @@ import { Transition } from './components/Transition';
 const routes = [
   {
     path: 'myself',
-    element: (
-      <Transition>
-        <MyselfPage />
-      </Transition>
-    ),
+    element: <MyselfPage />,
   },
   {
     path: 'about',
-    element: (
-      <Transition>
-        <div>About Page</div>
-      </Transition>
-    ),
+    element: <div>About Page</div>,
   },
   {
     path: 'work',
-    element: (
-      <Transition>
-        <div>Work Page</div>
-      </Transition>
-    ),
+    element: <div>Work Page</div>,
   },
   {
     path: 'testimonials',
-    element: (
-      <Transition>
-        <div>Testimonials Page</div>
-      </Transition>
-    ),
+    element: <div>Testimonials Page</div>,
   },
   {
     path: 'contact',
-    element: (
-      <Transition>
-        <div>Contact Page</div>
-      </Transition>
-    ),
+    element: <div>Contact Page</div>,
   },
 ];
 
@@ -69,7 +49,7 @@ const App = () => {
             ) : (
               <Route
                 path={route.path}
-                element={route.element}
+                element={<Transition>{route.element}</Transition>}
                 key={route.path}
               />
             ),
