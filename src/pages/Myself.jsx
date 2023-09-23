@@ -11,7 +11,7 @@ import MainText from '../components/MainText';
 import { myselfText } from '../constants';
 import { ParticlesContainer } from '../components/ParticlesContainer';
 
-export const MyselfPage = () => {
+export const Myself = () => {
   const navigate = useNavigate();
   const onClick = () => navigate('/work');
 

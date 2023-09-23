@@ -1,2 +1,3 @@
-export { HomePage } from './HomePage';
-export { MyselfPage } from './MyselfPage';
+export { Home } from './Home';
+export { Myself } from './Myself';
+export { About } from './About';

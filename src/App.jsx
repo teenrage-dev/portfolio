@@ -2,17 +2,17 @@ import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import { HomePage, MyselfPage } from './pages';
+import { Home, Myself, About } from './pages';
 import { Transition } from './components/Transition';
 
 const routes = [
   {
     path: 'myself',
-    element: <MyselfPage />,
+    element: <Myself />,
   },
   {
     path: 'about',
-    element: <div>About Page</div>,
+    element: <About />,
   },
   {
     path: 'work',
@@ -39,7 +39,7 @@ const App = () => {
           path='/'
           element={
             <Transition>
-              <HomePage />
+              <Home />
             </Transition>
           }
         >

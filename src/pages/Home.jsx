@@ -7,7 +7,7 @@ import { Menu } from '../components/Menu';
 import '../styles/components/_container.scss';
 import './styles/_homePage.scss';
 
-export const HomePage = () => {
+export const Home = () => {
   return (
     <div className='container'>
       <header className='header'>
