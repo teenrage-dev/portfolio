@@ -1,14 +1,16 @@
 @import '/src/styles/utils/variables';
 @import '/src/styles/utils/mixins';
 
-.section {
-    position: absolute;
-    top: 50%;
-    transform: $traslate-postion-center-y;
-    max-width: 688px;
-}
+.about-section {
+  position: absolute;
+  top: 50%;
+  transform: $traslate-postion-center-y;
+  display: flex;
 
-// .myface {
-//     position: absolute;
-//     left: -410px;
-// }
+  & .about-item {
+    &:last-child {
+      padding-top: 15px;
+      margin-left: 100px;
+    }
+  }
+}

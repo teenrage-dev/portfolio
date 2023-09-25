@@ -1,0 +1,71 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixins';
+
+.accordion-list {
+  max-width: 390px;
+
+  & .accordion-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &.accordion-item-active {
+      & .accordion-item-title {
+        & .accordion-item-title-btn {
+          text-decoration: none;
+          color: $accent-color;
+          @include primary-selection-text-styles;
+        }
+      }
+
+      & .accordion-item-text {
+        color: $white-color;
+        font-family: $secondary-font-family;
+        font-size: 18px;
+        font-weight: 300;
+        transition: color 1s ease;
+        padding: 25px 15px;
+        border-radius: 10px;
+        border: 2px solid $accent-color;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        animation: fadeIn 0.5s ease-in-out forwards;
+        & p {
+          @include accent-selection-text-styles;
+        }
+      }
+    }
+
+    & .accordion-item-title {
+      & .accordion-item-title-btn {
+        cursor: pointer;
+        font-size: 30px;
+
+        font-weight: 500;
+        text-decoration: underline;
+        text-decoration-color: $accent-color;
+        transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        @include accent-selection-text-styles;
+      }
+    }
+
+    & .accordion-item-text {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
