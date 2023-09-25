@@ -4,7 +4,7 @@ import '../styles/components/_accentButton.scss';
 export default function AccentButton({ onClick }) {
   return (
     <button className='accent-btn' type='button' onClick={() => onClick()}>
-      My project
+      My projects
     </button>
   );
 }
