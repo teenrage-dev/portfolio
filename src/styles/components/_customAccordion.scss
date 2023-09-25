@@ -13,6 +13,7 @@
       & .accordion-item-title {
         & .accordion-item-title-btn {
           text-decoration: none;
+          text-decoration-color: transparent;
           color: $accent-color;
           @include primary-selection-text-styles;
         }
@@ -46,7 +47,8 @@
         font-weight: 500;
         text-decoration: underline;
         text-decoration-color: $accent-color;
-        transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in-out;
+        transition: text-decoration 0.3s ease-in-out,
+          text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
         @include accent-selection-text-styles;
       }
