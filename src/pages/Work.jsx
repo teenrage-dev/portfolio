@@ -1,0 +1,78 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+import IELTSImg from '../assets/images/project-ielts.png';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import './styles/_work.scss';
+
+const data = [
+  {
+    avatar: IELTSImg,
+    description:
+      'Lorem ipsum dolor sit amet consectetur. Proin nunc sagittis diam sed sit. Auctor ullamcorper ultricies suscipit commodo volutpat sed aliquet neque at. ',
+    technologies: 'Angular • Kendo UI • etc',
+  },
+  {
+    avatar: IELTSImg,
+    description:
+      'Lorem ipsum dolor sit amet consectetur. Proin nunc sagittis diam sed sit. Auctor ullamcorper ultricies suscipit commodo volutpat sed aliquet neque at. ',
+    technologies: 'Angular • Kendo UI • etc',
+  },
+  {
+    avatar: IELTSImg,
+    description:
+      'Lorem ipsum dolor sit amet consectetur. Proin nunc sagittis diam sed sit. Auctor ullamcorper ultricies suscipit commodo volutpat sed aliquet neque at. ',
+    technologies: 'Angular • Kendo UI • etc',
+  },
+  {
+    avatar: IELTSImg,
+    description:
+      'Lorem ipsum dolor sit amet consectetur. Proin nunc sagittis diam sed sit. Auctor ullamcorper ultricies suscipit commodo volutpat sed aliquet neque at. ',
+    technologies: 'Angular • Kendo UI • etc',
+  },
+];
+
+export const Work = () => {
+  return (
+    <div className='work-section'>
+      <Swiper
+        modules={[Pagination]}
+        spaceBetween={40}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+        className='work-swiper'
+      >
+        {data.map(({ avatar, description, technologies }, index) => {
+          return (
+            <SwiperSlide key={index} className='work-swiper-slide'>
+              <div className='work-swiper-slide-item'>
+                <div className='work-swiper-image-wrapper'>
+                  <img
+                    src={avatar}
+                    alt='project_image'
+                    className='work-swiper-image'
+                  />
+                </div>
+              </div>
+              <div className='work-swiper-slide-item'>
+                <h3 className='work-swiper-slide-title'>My work</h3>
+                <p className='work-swiper-slide-description'>{description}</p>
+                <p className='work-swiper-slide-description-title'>
+                  Technologies
+                </p>
+                <p className='work-swiper-slide-description'>{technologies}</p>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </div>
+  );
+};

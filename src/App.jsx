@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import { Home, Myself, About } from './pages';
+import { Home, Myself, About, Work } from './pages';
 import { Transition } from './components/Transition';
 
 const routes = [
@@ -16,7 +16,7 @@ const routes = [
   },
   {
     path: 'work',
-    element: <div>Work Page</div>,
+    element: <Work />,
   },
   {
     path: 'testimonials',
@@ -30,7 +30,6 @@ const routes = [
 
 const App = () => {
   const location = useLocation();
-  console.log(location);
 
   return (
     <AnimatePresence mode='wait'>

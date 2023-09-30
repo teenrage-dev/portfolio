@@ -1,0 +1,85 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixins';
+
+.work-section {
+  position: absolute;
+  top: 50%;
+  transform: $traslate-postion-center-y;
+
+  & .work-swiper {
+    max-width: 1200px;
+    user-select: none;
+
+    & .work-swiper-slide {
+      display: flex;
+
+      & .work-swiper-image-wrapper {
+        width: 100%;
+        height: 529px;
+        max-width: 653px;
+        display: block;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 0px 40px 0px #f6c90e;
+
+        & .work-swiper-image {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      & .work-swiper-slide-item {
+        &:first-child {
+          padding: 40px;
+          margin-right: 25px;
+        }
+        &:last-child {
+          width: 35%;
+          padding-top: 40px;
+
+          & .work-swiper-slide-title {
+            color: #f6c90e;
+            font-size: 56px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+          }
+
+          & .work-swiper-slide-description-title {
+            text-align: justify;
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+
+          & .work-swiper-slide-description {
+            text-align: justify;
+            font-family: $secondary-font-family;
+            font-size: 24px;
+
+            &:first-of-type {
+              margin-bottom: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -----------------------SWIPER----------------------- //
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: -15%;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: $accent-color;
+  opacity: 0.5;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet-active {
+  background: $accent-color;
+  opacity: 1;
+}
