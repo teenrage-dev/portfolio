@@ -2,6 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
+import { SwiperWorkItem } from '../components/SwiperWorkItem';
 import IELTSImg from '../assets/images/project-ielts.png';
 
 import 'swiper/css';
@@ -51,24 +52,12 @@ export const Work = () => {
       >
         {data.map(({ avatar, description, technologies }, index) => {
           return (
-            <SwiperSlide key={index} className='work-swiper-slide'>
-              <div className='work-swiper-slide-item'>
-                <div className='work-swiper-image-wrapper'>
-                  <img
-                    src={avatar}
-                    alt='project_image'
-                    className='work-swiper-image'
-                  />
-                </div>
-              </div>
-              <div className='work-swiper-slide-item'>
-                <h3 className='work-swiper-slide-title'>My work</h3>
-                <p className='work-swiper-slide-description'>{description}</p>
-                <p className='work-swiper-slide-description-title'>
-                  Technologies
-                </p>
-                <p className='work-swiper-slide-description'>{technologies}</p>
-              </div>
+            <SwiperSlide key={index}>
+              <SwiperWorkItem
+                avatar={avatar}
+                description={description}
+                technologies={technologies}
+              />
             </SwiperSlide>
           );
         })}

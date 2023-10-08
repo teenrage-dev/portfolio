@@ -19,3 +19,17 @@
   -o-filter: $filter-image;
   -ms-filter: $filter-image;
 }
+
+@mixin filter-swiper-image {
+  filter: $swiper-item-image-filter;
+  -webkit-filter: $swiper-item-image-filter;
+  -moz-filter: $swiper-item-image-filter;
+  -o-filter: $swiper-item-image-filter;
+  -ms-filter: $swiper-item-image-filter;
+}
+
+@mixin position-center {
+  top: 50%;
+  left: 50%;
+  transform: $traslate-postion-center;
+}
