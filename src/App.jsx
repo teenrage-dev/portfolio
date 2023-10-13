@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import { Home, Myself, About, Work } from './pages';
+import { Home, Myself, About, Work, Testimonials } from './pages';
 import { Transition } from './components/Transition';
 
 const routes = [
@@ -20,7 +20,7 @@ const routes = [
   },
   {
     path: 'testimonials',
-    element: <div>Testimonials Page</div>,
+    element: <Testimonials />,
   },
   {
     path: 'contact',

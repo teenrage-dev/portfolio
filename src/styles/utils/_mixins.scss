@@ -33,3 +33,9 @@
   left: 50%;
   transform: $traslate-postion-center;
 }
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

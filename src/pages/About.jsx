@@ -14,7 +14,10 @@ export const About = () => {
     <>
       <div className='about-section'>
         <div className='about-item'>
-          <MainTitle />
+          <MainTitle
+            titleText={'Lorem ipsum dolor sit'}
+            titleFieldText={'amet consectetur!'}
+          />
           <MainText text={aboutfText} />
           <div className='achievement-wrapper'>
             <Achievement />

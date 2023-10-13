@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import '../styles/components/_swiperWorkItem.scss';
 
-export const SwiperWorkItem = ({ avatar, description, technologies }) => {
+export const SwiperWorkItem = ({ avatar, description, technologies, link }) => {
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div className={'work-swiper-slide'}>
@@ -16,7 +16,7 @@ export const SwiperWorkItem = ({ avatar, description, technologies }) => {
         >
           <img src={avatar} alt='project_image' className='work-swiper-image' />
           {isHovering && (
-            <a href='#1' className='work-swiper-image-link'>
+            <a href={link} className='work-swiper-image-link'>
               Live Project
             </a>
           )}
