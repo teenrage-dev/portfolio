@@ -28,4 +28,14 @@
     font-family: $secondary-font-family;
     font-size: 24px;
   }
+
+  & .icon-field{ position: absolute;
+    top: 15px;
+    left: 18%;
+    & .icon {
+      fill: $primary-color;
+      width: 98px;
+      height: 98px;
+    }
+  }
 }
