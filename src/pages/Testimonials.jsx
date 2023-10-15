@@ -1,6 +1,7 @@
 import React from 'react';
 
 import MainTitle from '../components/MainTitle';
+import { TestimonialSwiper } from '../components/TestimonialsSwiper';
 
 import './styles/_testimonials.scss';
 
@@ -15,10 +16,7 @@ export const Testimonials = () => {
           style={{ 'margin-bottom': '55px', 'text-align': 'center' }}
         />
         <div className='swiper-container'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-            eaque vel!
-          </p>
+          <TestimonialSwiper />
         </div>
       </div>
     </div>

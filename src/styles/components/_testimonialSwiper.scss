@@ -1,0 +1,11 @@
+@import '/src/styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.testimonials-swiper {
+  @include not-selected-text;
+
+  & .swiper-horizontal > .swiper-pagination-bullets,
+  & .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: auto;
+  }
+}

@@ -5,6 +5,11 @@
   @include flex-center;
   height: calc(100vh - 115px);
   min-height: 100%;
+  width: 100%;
+
+  & .testimonials-container {
+    width: 100%;
+  }
 }
 
 .swiper-container {
@@ -12,5 +17,4 @@
   border-radius: 10px;
   border: $main-border;
   box-shadow: 0px 0px 10px 0px #f6c90e;
-  padding: 70px 75px;
 }

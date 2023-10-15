@@ -8,7 +8,7 @@
 
   & .work-swiper {
     max-width: 1200px;
-    user-select: none;
+    @include not-selected-text;
   }
 }
 
