@@ -13,15 +13,18 @@
         transition: filter 0.5s;
       }
 
-      & .work-swiper-image-link {
+      & .work-swiper-image-link-container {
         position: absolute;
-        color: $primary-color;
-        text-shadow: $text-shadow-secondary;
-        font-size: 40px;
-        font-weight: 500;
-        text-transform: uppercase;
-        text-decoration: none;
         @include position-center;
+        cursor: pointer;
+        & .work-swiper-image-link {
+          color: $primary-color;
+          text-shadow: $text-shadow-secondary;
+          font-size: 40px;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
       }
     }
 

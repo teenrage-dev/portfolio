@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
@@ -40,6 +40,15 @@ const data = [
 ];
 
 export const TestimonialSwiper = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const onSlideChange = (swiper) => {
+    if (swiper.swipeDirection === 'next') {
+      setCurrentSlide((prev) => prev + 1);
+    } else {
+      setCurrentSlide((prev) => prev - 1);
+    }
+  };
   return (
     <Swiper
       modules={[Pagination]}
@@ -48,7 +57,7 @@ export const TestimonialSwiper = () => {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSlideChange={() => console.log('slide change')}
+      onSlideChange={onSlideChange}
       onSwiper={(swiper) => console.log(swiper)}
       className='testimonials-swiper'
     >
@@ -60,6 +69,7 @@ export const TestimonialSwiper = () => {
               name={name}
               description={description}
               rates={rates}
+              isActive={index === currentSlide}
             />
           </SwiperSlide>
         );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import '../styles/components/_swiperWorkItem.scss';
 
@@ -16,9 +17,17 @@ export const SwiperWorkItem = ({ avatar, description, technologies, link }) => {
         >
           <img src={avatar} alt='project_image' className='work-swiper-image' />
           {isHovering && (
-            <a href={link} className='work-swiper-image-link'>
-              Live Project
-            </a>
+            <div className='work-swiper-image-link-container'>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {' '}
+                <a href={link} className='work-swiper-image-link'>
+                  Live Project
+                </a>
+              </motion.button>
+            </div>
           )}
         </div>
       </div>
