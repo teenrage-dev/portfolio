@@ -40,6 +40,13 @@
   align-items: center;
 }
 
+@mixin flex-column-stretch {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
 @mixin not-selected-text {
   user-select: none;
 }

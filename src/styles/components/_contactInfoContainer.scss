@@ -1,0 +1,11 @@
+@import '/src/styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.contact-info-container {
+  & .contact-info-list {
+    @include flex-column-stretch;
+
+    & .contact-info-list-item {
+    }
+  }
+}

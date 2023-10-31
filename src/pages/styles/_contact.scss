@@ -1,0 +1,15 @@
+@import '/src/styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.contact-section {
+  @include flex-center;
+  height: calc(100vh - 115px);
+  min-height: 100%;
+  width: 100%;
+
+  & .contact-container {
+    width: 100%;
+    @include flex-center;
+    justify-content: space-between;
+  }
+}
