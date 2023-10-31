@@ -4,19 +4,31 @@ import { ContactInfoItem } from './ContactInfoItem';
 
 const data = [
   {
-    icon: 'email',
+    icon: {
+      id: 'email',
+      width: 34,
+      height: 22,
+    },
     info: { name: 'Email', text: 'raiiend.r@gmail.com' },
-    buttonName: 'Send a message',
+    link: { name: 'Send a message', link: '#' },
   },
   {
-    icon: 'telegram',
+    icon: {
+      id: 'telegram',
+      width: 40,
+      height: 40,
+    },
     info: { name: 'Telegram', text: '@teenrage' },
-    buttonName: 'Send a message',
+    link: { name: 'Send a message', link: '#' },
   },
   {
-    icon: 'cv',
+    icon: {
+      id: 'cv',
+      width: 36,
+      height: 36,
+    },
     info: { name: 'Curriculum vitae', text: '' },
-    buttonName: 'Download CV',
+    link: { name: 'Download CV', link: '#' },
   },
 ];
 

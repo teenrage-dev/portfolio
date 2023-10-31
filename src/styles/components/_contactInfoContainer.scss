@@ -4,8 +4,5 @@
 .contact-info-container {
   & .contact-info-list {
     @include flex-column-stretch;
-
-    & .contact-info-list-item {
-    }
   }
 }
