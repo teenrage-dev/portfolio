@@ -9,7 +9,8 @@
 
   & .contact-container {
     width: 100%;
-    @include flex-center;
+
+    display: flex;
     justify-content: space-between;
   }
 }

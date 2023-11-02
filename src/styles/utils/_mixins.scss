@@ -50,3 +50,24 @@
 @mixin not-selected-text {
   user-select: none;
 }
+
+@mixin scrollbar-dark {
+  scrollbar-width: thin;
+  scrollbar-color: $dark-second-color $scrollbar-color-hover;
+  scroll-padding: 5px;
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $scrollbar-color-hover;
+    padding: 5px;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $dark-second-color;
+    border-radius: 16px;
+    padding: 5px;
+  }
+}

@@ -24,7 +24,7 @@ export const Myself = () => {
         />
         <MainText text={myselfText} />
         <div className='wrapper-btn'>
-          <AccentButton onClick={onClick} />
+          <AccentButton onClick={onClick} text={'My projects'} />
         </div>
       </div>
       <div className='myface-myself'>
