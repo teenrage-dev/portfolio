@@ -16,7 +16,13 @@ export const ContactInfoItem = ({ item }) => {
         <p className='contact-info-list-item-text-title'>{item.info.name}</p>
         <p className='contact-info-list-item-text-text'>{item.info.text}</p>
       </div>
-      <a href={item.link.link} className='contact-info-list-item-link'>
+      <a
+        href={item.link.link}
+        className='contact-info-list-item-link'
+        target='_blank'
+        rel='noreferrer'
+        download={'Renat_Raiiend_Frontend_Developer.pdf'}
+      >
         {item.link.name}
       </a>
     </li>

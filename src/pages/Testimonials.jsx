@@ -13,7 +13,7 @@ export const Testimonials = () => {
           titleText={'What clients'}
           titleFieldText={' say'}
           isNewLine={false}
-          style={{ 'margin-bottom': '55px', 'text-align': 'center' }}
+          style={{ marginBottom: '55px', textAlign: 'center' }}
         />
         <div className='swiper-container'>
           <TestimonialSwiper />

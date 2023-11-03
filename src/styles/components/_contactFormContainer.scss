@@ -22,6 +22,8 @@
       color: $white-color;
       caret-color: $accent-color;
 
+      @include accent-selection-text-styles;
+
       &::placeholder {
         font-family: inherit;
       }

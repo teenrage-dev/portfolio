@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ContactInfoItem } from './ContactInfoItem';
+import cv from '../assets/cv/Renat_Raiiend_Frontend_Developer.pdf';
 
 const data = [
   {
@@ -10,7 +11,7 @@ const data = [
       height: 22,
     },
     info: { name: 'Email', text: 'raiiend.r@gmail.com' },
-    link: { name: 'Send a message', link: '#' },
+    link: { name: 'Send a message', link: 'mailto:raiiend.r@gmail.com' },
   },
   {
     icon: {
@@ -19,7 +20,7 @@ const data = [
       height: 40,
     },
     info: { name: 'Telegram', text: '@teenrage' },
-    link: { name: 'Send a message', link: '#' },
+    link: { name: 'Send a message', link: 'https://t.me/teenrage' },
   },
   {
     icon: {
@@ -28,7 +29,10 @@ const data = [
       height: 36,
     },
     info: { name: 'Curriculum vitae', text: '' },
-    link: { name: 'Download CV', link: '#' },
+    link: {
+      name: 'Download CV',
+      link: cv,
+    },
   },
 ];
 
