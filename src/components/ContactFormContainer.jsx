@@ -4,19 +4,30 @@ import emailjs from '@emailjs/browser';
 import MainTitle from './MainTitle';
 import AccentButton from './AccentButton';
 import { Input } from './Input';
+import { successNotification, errorNotification } from '../utils/index';
 
 import '../styles/components/_contactFormContainer.scss';
 
 export const ContactFormContainer = () => {
   const sendEmail = (e) => {
     e.preventDefault();
+    successNotification('Повідомлення відправлено ✉️');
 
-    emailjs.sendForm(
-      process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
-      e.target,
-      process.env.REACT_APP_PUBLIC_KEY,
-    );
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY,
+      )
+      .then((res) => {
+        if (res.status === 200 || res.text === 'OK') {
+          successNotification('Повідомлення відправлено ✉️');
+        }
+      })
+      .catch((err) => {
+        errorNotification('Помилка 🙄');
+      });
   };
 
   return (
@@ -53,9 +64,6 @@ export const ContactFormContainer = () => {
           placeholder='Your Message'
         ></textarea>
         <AccentButton
-          onClick={() => {
-            console.log('Send Email');
-          }}
           text={'Send message'}
           styles={{ width: 'fit-content' }}
           type={'submit'}

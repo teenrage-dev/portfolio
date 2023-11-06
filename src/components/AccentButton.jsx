@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/components/_accentButton.scss';
 
 export default function AccentButton({
-  onClick,
+  onClick = () => {},
   text,
   styles,
   type = 'button',
